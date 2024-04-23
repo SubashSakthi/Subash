@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="Test">
+		
+	<groups>
+		<run>
+			<include name="smoke"></include> <!-- it will exclude everything except smoke -->
+			<include name="IT"></include>
+			<include name="FT"></include>
+			<exclude name="ST"></exclude> <!-- it will not run ST, all other groups will run -->
+		</run>
+	</groups>
+	
+    <classes>
+      <class name="testNgBasics.DependencyTest"/>
+      <class name="testNgBasics.LoginTest"/>
+      <class name="testNgBasics.DisableScripts"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
