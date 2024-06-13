@@ -18,7 +18,7 @@ public class JewelryTest extends BaseClass {
 		JewelryPage jewelryPage = new JewelryPage(driver);
 
 		homepage.getJewelryLink().click();
-		test.log(LogStatus.INFO, "Hewelry Link Clicked");
+		test.log(LogStatus.INFO, "Jewelry Link Clicked");
 		try {
 			Assert.assertEquals(jewelryPage.getJewelryText().getText(), "asjbfb","Jewelry Page is not Disaplaye");
 			Reporter.log("Jewelry Page Is Dispalyed");
